@@ -20,26 +20,23 @@ main{max-width:860px;margin:0 auto;padding:2rem 1.5rem}
 h1{font-size:clamp(26px,5vw,44px);font-weight:600;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem}
 h1 span{color:var(--mut)}
 .sub{font-size:16px;color:var(--mut);max-width:440px;margin:0 auto;line-height:1.6}
-.card{background:var(--sur);border:1px solid var(--bor);border-radius:16px;overflow:hidden}
-.card-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--bor);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:16px;overflow:hidden;margin-bottom:2rem}
+.card-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--bor)}
 .card-title{font-size:15px;font-weight:500}
-.models{display:flex;gap:6px;flex-wrap:wrap}
-.mbtn{background:none;border:1px solid var(--bor);border-radius:8px;padding:5px 11px;font-size:12px;font-family:var(--font);color:var(--mut);cursor:pointer;transition:all .15s}
-.mbtn:hover{border-color:var(--txt);color:var(--txt)}
-.mbtn.active{background:var(--txt);border-color:var(--txt);color:#fff;font-weight:500}
 .body{padding:1.5rem}
 .api-box{background:var(--bg);border:1px solid var(--bor);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem}
-.api-row{display:flex;align-items:center;gap:10px}
-.api-row label{font-size:12px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;min-width:75px}
-.api-row input{flex:1;background:#fff;border:1px solid var(--bor);border-radius:8px;padding:9px 12px;font-size:13px;font-family:var(--mono);color:var(--txt)}
-.api-row input:focus{outline:none;border-color:var(--txt)}
+.row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.row:last-child{margin-bottom:0}
+.row label{font-size:12px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;min-width:90px}
+.row input{flex:1;background:#fff;border:1px solid var(--bor);border-radius:8px;padding:9px 12px;font-size:13px;font-family:var(--mono);color:var(--txt)}
+.row input:focus{outline:none;border-color:var(--txt)}
 .hint{font-size:12px;color:var(--mut);margin-top:8px}
 .hint a{color:var(--txt);text-decoration:underline}
 .lbl{font-size:12px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 textarea{width:100%;min-height:110px;background:var(--bg);border:1px solid var(--bor);border-radius:10px;padding:12px 14px;font-size:15px;font-family:var(--font);color:var(--txt);resize:vertical;line-height:1.6;margin-bottom:1.25rem}
 textarea:focus{outline:none;border-color:var(--txt)}
 textarea::placeholder{color:var(--mut)}
-.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
 .grp label{font-size:12px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px}
 select{width:100%;background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:9px 10px;font-size:13px;font-family:var(--font);color:var(--txt);appearance:none}
 select:focus{outline:none;border-color:var(--txt)}
@@ -60,18 +57,17 @@ select:focus{outline:none;border-color:var(--txt)}
 .rhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .rlbl{font-size:13px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
 .ract{display:flex;gap:8px}
-.abtn{background:none;border:1px solid var(--bor);border-radius:8px;padding:6px 12px;font-size:13px;font-family:var(--font);color:var(--mut);cursor:pointer;transition:all .15s}
+.abtn{background:none;border:1px solid var(--bor);border-radius:8px;padding:6px 12px;font-size:13px;font-family:var(--font);color:var(--mut);cursor:pointer}
 .abtn:hover{border-color:var(--txt);color:var(--txt)}
 .vbox{background:#0a0a0a;border-radius:12px;overflow:hidden;min-height:260px;display:flex;align-items:center;justify-content:center}
 .vbox video{width:100%}
-.ex-sec{margin-top:2.5rem}
-.sec-lbl{font-size:13px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem}
 .ex-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .ex{background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:1rem;cursor:pointer;transition:all .15s}
 .ex:hover{border-color:var(--txt);transform:translateY(-1px)}
 .ei{font-size:20px;margin-bottom:6px;display:block}
 .et{font-size:13px;color:var(--txt);line-height:1.5}
 .etag{font-size:11px;color:var(--mut);margin-top:4px}
+.sec-lbl{font-size:13px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem}
 footer{text-align:center;padding:2.5rem;font-size:13px;color:var(--mut);border-top:1px solid var(--bor);margin-top:3rem}
 </style>
 </head>
@@ -81,41 +77,39 @@ footer{text-align:center;padding:2.5rem;font-size:13px;color:var(--mut);border-t
 </nav>
 <main>
   <div class="hero">
-    <div class="badge"><span class="bdot"></span>Powered by FAL.ai</div>
+    <div class="badge"><span class="bdot"></span>Powered by Kling AI</div>
     <h1>Crie vídeos com <span>inteligência</span><br>artificial</h1>
     <p class="sub">Descreva sua cena e a IA gera o vídeo em segundos.</p>
   </div>
   <div class="card">
-    <div class="card-head">
-      <span class="card-title">Novo vídeo</span>
-      <div class="models">
-        <button class="mbtn active" data-model="fal-ai/kling-video/v1.6/standard/text-to-video" onclick="selModel(this)">Kling 1.6</button>
-        <button class="mbtn" data-model="fal-ai/ltx-video" onclick="selModel(this)">LTX</button>
-        <button class="mbtn" data-model="fal-ai/minimax-video" onclick="selModel(this)">MiniMax</button>
-      </div>
-    </div>
+    <div class="card-head"><span class="card-title">Suas chaves Kling AI</span></div>
     <div class="body">
       <div class="api-box">
-        <div class="api-row">
-          <label>API Key</label>
-          <input type="password" id="apikey" placeholder="Cole sua chave do FAL.ai"/>
+        <div class="row">
+          <label>Access Key</label>
+          <input type="password" id="accessKey" placeholder="Cole seu Access Key"/>
         </div>
-        <div class="hint">Obtenha em <a href="https://fal.ai/dashboard/keys" target="_blank">fal.ai/dashboard/keys</a></div>
+        <div class="row">
+          <label>Secret Key</label>
+          <input type="password" id="secretKey" placeholder="Cole seu Secret Key"/>
+        </div>
+        <div class="hint">Obtenha em <a href="https://platform.klingai.com" target="_blank">platform.klingai.com</a> → API Keys</div>
       </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="card-title">Novo vídeo</span></div>
+    <div class="body">
       <div class="lbl">Descreva o vídeo</div>
-      <textarea id="prompt" placeholder="Ex: Astronauta caminhando em Marte ao pôr do sol..."></textarea>
+      <textarea id="prompt" placeholder="Ex: Astronauta caminhando em Marte ao pôr do sol, cinemático..."></textarea>
       <div class="grid">
         <div class="grp">
           <label>Duração</label>
-          <select id="duration"><option value="5">5 seg</option><option value="10" selected>10 seg</option></select>
+          <select id="duration"><option value="5" selected>5 segundos</option><option value="10">10 segundos</option></select>
         </div>
         <div class="grp">
           <label>Proporção</label>
           <select id="ratio"><option value="16:9" selected>16:9</option><option value="9:16">9:16</option><option value="1:1">1:1</option></select>
-        </div>
-        <div class="grp">
-          <label>Estilo</label>
-          <select id="style"><option value="">Padrão</option><option value="cinematic">Cinemático</option><option value="anime">Anime</option><option value="photorealistic">Foto</option></select>
         </div>
       </div>
       <button class="btn-gen" id="genBtn" onclick="gen()">
@@ -130,21 +124,18 @@ footer{text-align:center;padding:2.5rem;font-size:13px;color:var(--mut);border-t
       </div>
     </div>
   </div>
-  <div class="ex-sec">
-    <div class="sec-lbl">Exemplos</div>
-    <div class="ex-grid">
-      <div class="ex" onclick="fill(this)"><span class="ei">🌊</span><div class="et">Ondas do oceano ao amanhecer, câmera lenta, luz dourada</div><div class="etag">Natureza</div></div>
-      <div class="ex" onclick="fill(this)"><span class="ei">🏙️</span><div class="et">Cidade futurista à noite com carros voadores e neons</div><div class="etag">Sci-Fi</div></div>
-      <div class="ex" onclick="fill(this)"><span class="ei">🦋</span><div class="et">Borboleta pousando em flor, macro, foco suave</div><div class="etag">Natureza</div></div>
-      <div class="ex" onclick="fill(this)"><span class="ei">🎨</span><div class="et">Tinta colorida se dissolvendo na água, fundo preto</div><div class="etag">Arte</div></div>
-    </div>
+  <div class="sec-lbl">Exemplos</div>
+  <div class="ex-grid">
+    <div class="ex" onclick="fill(this)"><span class="ei">🌊</span><div class="et">Ondas do oceano ao amanhecer, câmera lenta, luz dourada</div><div class="etag">Natureza</div></div>
+    <div class="ex" onclick="fill(this)"><span class="ei">🏙️</span><div class="et">Cidade futurista à noite com carros voadores e neons</div><div class="etag">Sci-Fi</div></div>
+    <div class="ex" onclick="fill(this)"><span class="ei">🦋</span><div class="et">Borboleta pousando em flor, macro, foco suave</div><div class="etag">Natureza</div></div>
+    <div class="ex" onclick="fill(this)"><span class="ei">🎨</span><div class="et">Tinta colorida se dissolvendo na água, fundo preto</div><div class="etag">Arte</div></div>
   </div>
 </main>
-<footer>VeoAI · Powered by FAL.ai</footer>
+<footer>VeoAI · Powered by Kling AI</footer>
 <script>
-let model='fal-ai/kling-video/v1.6/standard/text-to-video',vidUrl='';
-function selModel(b){document.querySelectorAll('.mbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');model=b.dataset.model}
-function fill(c){document.getElementById('prompt').value=c.querySelector('.et').textContent;document.querySelector('.card').scrollIntoView({behavior:'smooth',block:'start'})}
+let vidUrl='';
+function fill(c){document.getElementById('prompt').value=c.querySelector('.et').textContent}
 function ss(t,p){document.getElementById('sta').classList.add('on');document.getElementById('stxt').textContent=t;document.getElementById('spct').textContent=p}
 function hs(){document.getElementById('sta').classList.remove('on')}
 function se(m){const e=document.getElementById('err');e.textContent=m;e.classList.add('on')}
@@ -153,49 +144,48 @@ function reset(){document.getElementById('res').classList.remove('on');setBtn(fa
 function dl(){if(!vidUrl)return;const a=document.createElement('a');a.href=vidUrl;a.download='video-ia.mp4';a.target='_blank';document.body.appendChild(a);a.click();document.body.removeChild(a)}
 function setBtn(l){const b=document.getElementById('genBtn');b.disabled=l;b.innerHTML=l?'<div style="width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite"></div> Gerando...':'<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6.5L14 8L9.5 9.5L8 14L6.5 9.5L2 8L6.5 6.5L8 2Z" fill="white"/></svg> Gerar Vídeo'}
 async function gen(){
-  const key=document.getElementById('apikey').value.trim();
+  const ak=document.getElementById('accessKey').value.trim();
+  const sk=document.getElementById('secretKey').value.trim();
   const prompt=document.getElementById('prompt').value.trim();
-  const style=document.getElementById('style').value;
   const duration=document.getElementById('duration').value;
   const ratio=document.getElementById('ratio').value;
   he();
-  if(!key){se('Insira sua API Key do FAL.ai.');return}
+  if(!ak||!sk){se('Insira seu Access Key e Secret Key do Kling AI.');return}
   if(!prompt){se('Descreva o vídeo que deseja gerar.');return}
   setBtn(true);
-  const fp=style?`${prompt}, ${style} style`:prompt;
-  ss('Enviando para FAL.ai...','10%');
+  ss('Enviando para Kling AI...','10%');
   try{
-    const r=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json','x-fal-key':key},body:JSON.stringify({model,prompt:fp,duration,aspect_ratio:ratio})});
+    const r=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessKey:ak,secretKey:sk,prompt,duration,aspect_ratio:ratio})});
     const d=await r.json();
-    if(!r.ok){if(r.status===401)throw new Error('API Key inválida.');if(r.status===402)throw new Error('Créditos insuficientes.');throw new Error(d.detail||d.message||d.error||`Erro ${r.status}`)}
-    const{request_id}=d;
-    if(!request_id)throw new Error('Não foi possível iniciar.');
+    if(!r.ok)throw new Error(d.message||d.error||`Erro ${r.status}`);
+    const taskId=d.data?.task_id;
+    if(!taskId)throw new Error('Não foi possível iniciar a geração.');
     ss('Aguardando na fila...','20%');
     let att=0;
-    while(att<150){
-      await new Promise(x=>setTimeout(x,4000));att++;
-      const sr=await fetch(`/api/status/${model}/requests/${request_id}`,{headers:{'x-fal-key':key}});
+    while(att<120){
+      await new Promise(x=>setTimeout(x,5000));att++;
+      const sr=await fetch(`/api/status/${taskId}?accessKey=${encodeURIComponent(ak)}&secretKey=${encodeURIComponent(sk)}`);
       if(!sr.ok)continue;
       const sd=await sr.json();
-      if(sd.status==='COMPLETED'){
-        ss('Carregando vídeo...','95%');
-        const rr=await fetch(`/api/result/${model}/requests/${request_id}`,{headers:{'x-fal-key':key}});
-        const rd=await rr.json();
-        const url=rd?.video?.url||rd?.video_url||(Array.isArray(rd?.videos)&&rd.videos[0]?.url);
-        if(!url)throw new Error('Nenhum vídeo retornado. Tente outro modelo.');
+      const status=sd.data?.task_status;
+      if(status==='succeed'){
+        const url=sd.data?.task_result?.videos?.[0]?.url;
+        if(!url)throw new Error('Nenhum vídeo retornado.');
         vidUrl=url;
         document.getElementById('vid').src=url;
         document.getElementById('vid').load();
         hs();document.getElementById('res').classList.add('on');
         document.getElementById('res').scrollIntoView({behavior:'smooth'});
         setBtn(false);return;
-      }else if(sd.status==='FAILED'){throw new Error('Geração falhou: '+(sd.error||'erro desconhecido.'))}
+      }else if(status==='failed'){
+        throw new Error('Geração falhou: '+(sd.data?.task_status_msg||'erro desconhecido.'));
+      }
       const msgs=['Processando frames...','Gerando cenas...','Renderizando...','Aplicando movimentos...'];
-      ss(msgs[att%msgs.length],`${Math.min(20+att*.5,90).toFixed(0)}%`);
+      ss(msgs[att%msgs.length],`${Math.min(20+att*0.6,90).toFixed(0)}%`);
     }
     throw new Error('Tempo limite. Tente novamente.');
   }catch(e){hs();se(e.message);setBtn(false)}
 }
 </script>
 </body>
-  </html>
+        </html>
